@@ -10,7 +10,7 @@
     "project": {
       "id": "autocritic",
       "name": "AutoCritic",
-      "href": "https://github.com/Dolvido/AutoCritic"
+      "href": "https://github.com/lpaynedev/AutoCritic"
     },
     "tags": [
       "AI",
@@ -48,7 +48,7 @@
       {
         "id": "source-repository",
         "label": "AutoCritic source repository",
-        "href": "https://github.com/Dolvido/AutoCritic",
+        "href": "https://github.com/lpaynedev/AutoCritic",
         "kind": "Repository",
         "note": "Public source and setup instructions for the historical local review tool."
       }
@@ -188,15 +188,15 @@
           "type": "code",
           "language": "shell",
           "caption": "Local setup",
-          "code": "git clone https://github.com/Dolvido/AutoCritic\ncd AutoCritic\npip install -r requirements.txt\npython setup.py"
+          "code": "git clone https://github.com/lpaynedev/AutoCritic\ncd AutoCritic\npip install -r requirements.txt\npython setup.py"
         },
         {
           "type": "links",
           "items": [
             {
               "label": "View the AutoCritic repository",
-              "href": "https://github.com/Dolvido/AutoCritic",
-              "note": "github.com/Dolvido/AutoCritic"
+              "href": "https://github.com/lpaynedev/AutoCritic",
+              "note": "github.com/lpaynedev/AutoCritic"
             }
           ]
         }

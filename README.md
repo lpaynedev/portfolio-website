@@ -3,7 +3,7 @@
 Portfolio and engineering case studies for AI, backend, and full-stack roles.
 
 - **Website:** [https://lukepayne.web.app/](https://lukepayne.web.app/)
-- **GitHub:** [https://github.com/Dolvido](https://github.com/Dolvido)
+- **GitHub:** [https://github.com/lpaynedev](https://github.com/lpaynedev)
 - **LinkedIn:** [https://www.linkedin.com/in/lukepaynesci/](https://www.linkedin.com/in/lukepaynesci/)
 
 ## Selected work
@@ -13,13 +13,13 @@ The homepage features LLM Tool Calling Lab alongside the existing selected work:
 | Project | Focus | Source availability |
 | --- | --- | --- |
 | [LLM Tool Calling Lab](https://lukepayne.web.app/projects/llm-tool-calling-lab/) | Controlled comparison of generic tool calling and added planning, with frozen synthetic evidence and negative findings | Public experimental v0.1.0 |
-| [Brain in Computer (BiC)](https://github.com/Dolvido/BiC) | Verified English curricula, local tutor experiments, and measured learning limits | Public research prototype |
-| [AutoAgent](https://github.com/Dolvido/AutoAgent) | Local code review, structured findings, feedback, and example retrieval | Public experimental prototype |
+| [Brain in Computer (BiC)](https://github.com/lpaynedev/BiC) | Verified English curricula, local tutor experiments, and measured learning limits | Public research prototype |
+| [AutoAgent](https://github.com/lpaynedev/AutoAgent) | Local code review, structured findings, feedback, and example retrieval | Public experimental prototype |
 | [Fuguely](https://lukepayne.web.app/projects/fuguely/) | Music-teacher scheduling, booking, communication, and billing workflows | Private source; public case study |
 | [PRIM](https://lukepayne.web.app/projects/prim/) | Deterministic simulation, experiment comparison, replay, and inspection tools | Private source; public case study |
-| [NASA CMR AI Agent](https://github.com/Dolvido/NASA_CMR_AGENT) | Independent assessment project using public NASA CMR APIs | Public repository |
-| [Smart Image Insights](https://github.com/Dolvido/smart-image-insights) | Detection and captioning interface with a separate inference service | Public prototype |
-| [Document Q&A Search](https://github.com/Dolvido/document_qa_sample) | PDF extraction and keyword-matched snippets with filename references | Public prototype |
+| [NASA CMR AI Agent](https://github.com/lpaynedev/NASA_CMR_AGENT) | Independent assessment project using public NASA CMR APIs | Public repository |
+| [Smart Image Insights](https://github.com/lpaynedev/smart-image-insights) | Detection and captioning interface with a separate inference service | Public prototype |
+| [Document Q&A Search](https://github.com/lpaynedev/document_qa_sample) | PDF extraction and keyword-matched snippets with filename references | Public prototype |
 
 Project descriptions distinguish implemented behavior from future work. Private-project case studies summarize design decisions without publishing their source. Prototype deployment links are retained, but do not imply a current availability guarantee.
 

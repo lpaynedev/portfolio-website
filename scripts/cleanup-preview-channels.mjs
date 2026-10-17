@@ -1,7 +1,7 @@
 import { pathToFileURL } from 'node:url';
 
 const channelRoot = 'https://firebasehosting.googleapis.com/v1beta1/projects/lukepayne/sites/lukepayne/channels';
-const pullRoot = 'https://api.github.com/repos/Dolvido/portfolio-website/pulls';
+const pullRoot = 'https://api.github.com/repos/lpaynedev/portfolio-website/pulls';
 
 // Only channels made by this repository's PR deploy action are eligible.
 export function previewPullNumber(name) {

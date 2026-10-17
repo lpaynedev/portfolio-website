@@ -1,6 +1,6 @@
 # OpenClaw series editorial map
 
-This reorganization uses [the published snapshot](https://github.com/Dolvido/portfolio-website/blob/aac361bb540d581a523f06d48e5ffa0c1a11008d/content/lab/openclaw-engine-progress.json), not the newer unpublished handoff notes. It changes presentation and scope, not engineering status.
+This reorganization uses [the published snapshot](https://github.com/lpaynedev/portfolio-website/blob/aac361bb540d581a523f06d48e5ffa0c1a11008d/content/lab/openclaw-engine-progress.json), not the newer unpublished handoff notes. It changes presentation and scope, not engineering status.
 
 The existing /lab/openclaw-engine-progress/ URL becomes the overview. Eight numbered posts carry the technical stories, with summaries, limitations, historical-source references and previous/next navigation. The existing Lab loader discovers them automatically.
 

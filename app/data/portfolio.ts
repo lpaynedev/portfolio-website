@@ -7,8 +7,8 @@ export const profile = {
   phoneHref: "tel:+15403226547",
   portfolio: "https://lukepayne.web.app/",
   portfolioLabel: "lukepayne.web.app",
-  github: "https://github.com/Dolvido",
-  githubLabel: "@Dolvido",
+  github: "https://github.com/lpaynedev",
+  githubLabel: "@lpaynedev",
   linkedin: "https://www.linkedin.com/in/lukepaynesci/",
   linkedinLabel: "in/lukepaynesci",
   status: "Open to work",
@@ -107,7 +107,7 @@ export const projects: PortfolioProject[] = [
     "category": "Applied ML / Controlled Experiment",
     "title": "LLM Tool Calling Lab",
     "status": "Experimental v0.1.0",
-    "githubUrl": "https://github.com/Dolvido/llm-tool-calling-lab",
+    "githubUrl": "https://github.com/lpaynedev/llm-tool-calling-lab",
     "caseStudyUrl": "/projects/llm-tool-calling-lab",
     "description": "Local chatbot for regression, binary classification, anomaly ranking and clustering. On 24 synthetic held-out datasets, generic tool calling passed 33/48 conversations and structured planning passed 31/48; extra planning showed no observed completion benefit.",
     "tags": [
@@ -127,15 +127,15 @@ export const projects: PortfolioProject[] = [
     "evidenceLinks": [
       {
         "label": "Results and evidence map",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/main/RESULTS.md#inspect-the-evidence"
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/main/RESULTS.md#inspect-the-evidence"
       },
       {
         "label": "Protocol and controls",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/main/EVALUATION.md"
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/main/EVALUATION.md"
       },
       {
         "label": "Raw evidence and frozen source",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0"
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/releases/tag/v0.1.0"
       }
     ],
     "caseStudy": {
@@ -162,7 +162,7 @@ export const projects: PortfolioProject[] = [
     "category": "Neural Learning Research",
     "title": "Brain in Computer (BiC)",
     "status": "Research prototype",
-    "githubUrl": "https://github.com/Dolvido/BiC",
+    "githubUrl": "https://github.com/lpaynedev/BiC",
     "caseStudyUrl": "/projects/bic",
     "description": "Small neural learner with verified English curricula, an external local tutor loop, and a CPU demo. Controlled experiments measure instruction learning, retention, and the limits of unfamiliar composition.",
     "tags": [
@@ -199,15 +199,15 @@ export const projects: PortfolioProject[] = [
     "evidenceLinks": [
       {
         "label": "Controlled comparison and failed promotion",
-        "href": "https://github.com/Dolvido/BiC/blob/main/docs/SHARED_RATE_RESULTS.md"
+        "href": "https://github.com/lpaynedev/BiC/blob/main/docs/SHARED_RATE_RESULTS.md"
       },
       {
         "label": "CPU demo and its limits",
-        "href": "https://github.com/Dolvido/BiC/blob/main/docs/PUBLIC_DEMO.md"
+        "href": "https://github.com/lpaynedev/BiC/blob/main/docs/PUBLIC_DEMO.md"
       },
       {
         "label": "Recorded demo observations",
-        "href": "https://github.com/Dolvido/BiC/blob/main/assets/demo-observations.json"
+        "href": "https://github.com/lpaynedev/BiC/blob/main/assets/demo-observations.json"
       }
     ]
   },
@@ -217,7 +217,7 @@ export const projects: PortfolioProject[] = [
     "category": "AI / Data Search",
     "title": "NASA CMR AI Agent",
     "status": "Independent assessment prototype",
-    "githubUrl": "https://github.com/Dolvido/NASA_CMR_AGENT",
+    "githubUrl": "https://github.com/lpaynedev/NASA_CMR_AGENT",
     "caseStudyUrl": "/projects/nasa-cmr-agent",
     "disclaimer": "Independent assessment prototype, not an official NASA product or an operational service. Searches metadata rather than analyzing Earth-observation data. Recommendations are heuristic, not scientifically validated rankings; live provider behavior and deployment readiness are not established by the test doubles.",
     "description": "Natural-language search of public NASA CMR metadata through Python, FastAPI and a staged LangGraph workflow. Graph stages run in sequence; CMR requests can run concurrently. The HTTP streaming endpoint follows a separate lightweight search flow.",
@@ -236,7 +236,7 @@ export const projects: PortfolioProject[] = [
       "Focused tests around agent and API boundaries, mostly using test doubles."
     ],
     "caseStudy": {
-      "source": "GitHub README: Dolvido/NASA_CMR_AGENT",
+      "source": "GitHub README: lpaynedev/NASA_CMR_AGENT",
       "problem": "NASA CMR is powerful, but natural-language Earth science questions need to be converted into precise search parameters before collection, granule, and variable search becomes useful. The README calls out that CMR reliability depends on good parameterization, so the project centers on planning and validation before synthesis.",
       "approach": [
         "Separate intent, validation, planning, CMR search, analysis and synthesis into staged graph components.",
@@ -254,7 +254,7 @@ export const projects: PortfolioProject[] = [
     "evidenceLinks": [
       {
         "label": "Architecture, endpoints and limitations",
-        "href": "https://github.com/Dolvido/NASA_CMR_AGENT/blob/main/README.md"
+        "href": "https://github.com/lpaynedev/NASA_CMR_AGENT/blob/main/README.md"
       }
     ]
   },
@@ -264,7 +264,7 @@ export const projects: PortfolioProject[] = [
     "category": "Local AI / Developer Tools",
     "title": "AutoAgent",
     "status": "Experimental prototype",
-    "githubUrl": "https://github.com/Dolvido/AutoAgent",
+    "githubUrl": "https://github.com/lpaynedev/AutoAgent",
     "caseStudyUrl": "/projects/autoagent",
     "description": "Local code-review tooling with Ollama-backed critiques, structured findings, stored feedback, and retrieval of earlier examples. Explicit failure handling keeps model and retrieval errors visible.",
     "tags": [
@@ -281,7 +281,7 @@ export const projects: PortfolioProject[] = [
     ],
     "disclaimer": "Experimental local application. Ticket and patch workflows remain experimental; stored feedback does not demonstrate improved review correctness.",
     "caseStudy": {
-      "source": "GitHub README: Dolvido/AutoAgent",
+      "source": "GitHub README: lpaynedev/AutoAgent",
       "problem": "Model-generated code reviews need structured findings, useful context, and clear failures before a developer can assess proposed changes. AutoAgent explores those requirements through a local review workflow.",
       "approach": [
         "Normalize local Ollama responses into structured issues through a Next.js critique endpoint.",
@@ -303,7 +303,7 @@ export const projects: PortfolioProject[] = [
     "category": "Computer Vision",
     "title": "Smart Image Insights",
     "status": "Inference prototype",
-    "githubUrl": "https://github.com/Dolvido/smart-image-insights",
+    "githubUrl": "https://github.com/lpaynedev/smart-image-insights",
     "caseStudyUrl": "/projects/smart-image-insights",
     "description": "Multi-image analysis prototype with a Next.js interface and a separate FastAPI inference service. The upload workflow displays YOLOv5 object detections and BLIP scene captions; the backend also includes CLIP/FAISS image retrieval.",
     "tags": [

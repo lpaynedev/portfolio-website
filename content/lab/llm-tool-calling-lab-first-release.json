@@ -10,7 +10,7 @@
     "project": {
       "id": "llm-tool-calling-lab",
       "name": "LLM Tool Calling Lab",
-      "href": "https://github.com/Dolvido/llm-tool-calling-lab"
+      "href": "https://github.com/lpaynedev/llm-tool-calling-lab"
     },
     "tags": [
       "Local AI",
@@ -29,39 +29,39 @@
       {
         "id": "release",
         "label": "v0.1.0 experimental release",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0",
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/releases/tag/v0.1.0",
         "kind": "Release",
         "note": "Source packages, frozen evidence, preserved failures and checksums."
       },
       {
         "id": "results",
         "label": "Frozen first-pass results",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/v0.1.0/RESULTS.md",
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/v0.1.0/RESULTS.md",
         "kind": "Evaluation report",
         "note": "Campaign denominators, per-family scores, failures and review limitations."
       },
       {
         "id": "protocol",
         "label": "Frozen evaluation protocol",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/v0.1.0/EVALUATION.md",
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/v0.1.0/EVALUATION.md",
         "kind": "Protocol"
       },
       {
         "id": "verification",
         "label": "Release verification receipt",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/v0.1.0/results/v0.1.0/verification.json",
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/v0.1.0/results/v0.1.0/verification.json",
         "kind": "Verification"
       },
       {
         "id": "adapter",
         "label": "Exercised model replacement",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/v0.1.0/docs/ADAPTERS.md",
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/v0.1.0/docs/ADAPTERS.md",
         "kind": "Developer guide"
       },
       {
         "id": "evidence-map",
         "label": "Claim-to-artifact evidence map",
-        "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/main/RESULTS.md#inspect-the-evidence",
+        "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/main/RESULTS.md#inspect-the-evidence",
         "kind": "Evidence navigation",
         "note": "Repository reports, exact raw-episode archive paths and reproduction limits."
       }
@@ -303,11 +303,11 @@
           "items": [
             {
               "label": "Results and exact archive paths",
-              "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/main/RESULTS.md#inspect-the-evidence"
+              "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/main/RESULTS.md#inspect-the-evidence"
             },
             {
               "label": "Implemented controls and limits",
-              "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/main/EVALUATION.md#implemented-controls-and-limits-of-the-comparison"
+              "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/main/EVALUATION.md#implemented-controls-and-limits-of-the-comparison"
             },
             {
               "label": "Project case study",
@@ -329,22 +329,22 @@
           "items": [
             {
               "label": "Get the experimental release",
-              "href": "https://github.com/Dolvido/llm-tool-calling-lab/releases/tag/v0.1.0",
+              "href": "https://github.com/lpaynedev/llm-tool-calling-lab/releases/tag/v0.1.0",
               "note": "Quickstart and downloadable evidence"
             },
             {
               "label": "Read the complete results",
-              "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/v0.1.0/RESULTS.md",
+              "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/v0.1.0/RESULTS.md",
               "note": "Model quality, conversation completion and resource usage are separate"
             },
             {
               "label": "Replace a specialist",
-              "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/v0.1.0/docs/ADAPTERS.md",
+              "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/v0.1.0/docs/ADAPTERS.md",
               "note": "Exercised catalog and estimator interface"
             },
             {
               "label": "Read the vision and next priorities",
-              "href": "https://github.com/Dolvido/llm-tool-calling-lab/blob/main/docs/VISION.md",
+              "href": "https://github.com/lpaynedev/llm-tool-calling-lab/blob/main/docs/VISION.md",
               "note": "Proposed work and definitions of done"
             }
           ]

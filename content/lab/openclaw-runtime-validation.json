@@ -32,14 +32,14 @@
       {
         "id": "original-snapshot",
         "label": "Original progress log before the series split",
-        "href": "https://github.com/Dolvido/portfolio-website/blob/aac361bb540d581a523f06d48e5ffa0c1a11008d/content/lab/openclaw-engine-progress.json",
+        "href": "https://github.com/lpaynedev/portfolio-website/blob/aac361bb540d581a523f06d48e5ffa0c1a11008d/content/lab/openclaw-engine-progress.json",
         "kind": "Historical publication source",
         "note": "The complete previously published narrative. This documents the public report, not independent reproduction of engine results."
       },
       {
         "id": "publication-contract",
         "label": "Lab publication guide",
-        "href": "https://github.com/Dolvido/portfolio-website/blob/main/content/lab/README.md",
+        "href": "https://github.com/lpaynedev/portfolio-website/blob/main/content/lab/README.md",
         "kind": "Publication process",
         "note": "The content format, review states, validation checks and public disclosure rules used by this site."
       }

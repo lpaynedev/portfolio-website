@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Resume | Luke Payne", alternates: { 
 
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import { education, experience, profile, resumeProjects, resumeSkillGroups, resumeSummary } from "../data/portfolio";
+import { additionalExperience, education, experience, profile, resumeProjects, resumeSkillGroups, resumeSummary } from "../data/portfolio";
 
 export default function Resume() {
   return (
@@ -16,7 +16,7 @@ export default function Resume() {
       <main id="main-content" className="portfolio-content container">
         <section data-screen-label="Resume" className="py-12 md:py-16">
           <div className="border-t-2 border-[var(--ink)] pt-5">
-            <div className="flex flex-wrap items-center justify-between gap-4"><h1 className="text-4xl font-bold uppercase md:text-5xl">Resume</h1><PrintResume /></div>
+            <div className="flex flex-wrap items-center justify-between gap-4"><h1 className="text-4xl font-bold uppercase md:text-5xl">Resume</h1><div className="flex flex-wrap gap-4 items-center"><a className="accent-link text-sm" href="/Luke_Payne_Resume.pdf">Download one-page PDF</a><PrintResume /></div></div>
             <p className="mt-3 text-sm font-semibold uppercase text-[var(--accent)]">{profile.role}</p>
             <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-[var(--muted)]">
               <span>{profile.location}</span>
@@ -109,8 +109,9 @@ export default function Resume() {
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-[150px_1fr] md:gap-8">
-            <div className="text-xs font-semibold uppercase text-[var(--faint)]">04 / Education</div>
+            <div className="text-xs font-semibold uppercase text-[var(--faint)]">04 / Additional experience and education</div>
             <div>
+              <ul className="mb-6 space-y-2 text-sm leading-7 text-[var(--muted)]">{additionalExperience.map(item => <li key={item}>{item}</li>)}</ul>
               {education.map((item, index) => (
                 <div
                   key={item.degree}

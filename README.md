@@ -8,7 +8,7 @@ Portfolio and engineering case studies for AI, backend, and full-stack roles.
 
 ## Selected work
 
-The homepage features LLM Tool Calling Lab alongside the existing selected work: Brain in Computer (BiC), NASA CMR AI Agent, AutoAgent, Smart Image Insights, Fuguely, and PRIM. Featured entries are maintained in `app/data/portfolio.ts`.
+The homepage leads with the LLM Tool Calling Lab and Earth Science Metadata Agent, matching the reviewed résumé. AutoAgent, Fuguely, BiC and OpenClaw remain available as additional work. Project records are maintained in `app/data/portfolio.ts`; homepage presentation is in `app/components/StudioSections.tsx`. The one-page résumé PDF is available at `/Luke_Payne_Resume.pdf`.
 
 | Project | Focus | Source availability |
 | --- | --- | --- |

@@ -1,7 +1,7 @@
 export const profile = {
   name: "Luke Payne",
-  role: "Software engineer / AI & applied ML",
-  location: "Virginia, United States",
+  role: "Software Engineer | Python, TypeScript and Applied AI",
+  location: "Remote, Virginia",
   email: "lukecello@gmail.com",
   phone: "(540) 322-6547",
   phoneHref: "tel:+15403226547",
@@ -55,7 +55,7 @@ export type PortfolioProject = {
 export const projects: PortfolioProject[] = [
   {
     "id": "openclaw-evolutionary-lab",
-    "featured": true,
+    "featured": false,
     "category": "Agent systems / Architecture & acceptance",
     "title": "OpenClaw Evolutionary Coding Lab",
     "status": "Active engineering / historical offline candidate",
@@ -109,7 +109,7 @@ export const projects: PortfolioProject[] = [
     "status": "Experimental v0.1.0",
     "githubUrl": "https://github.com/lpaynedev/llm-tool-calling-lab",
     "caseStudyUrl": "/projects/llm-tool-calling-lab",
-    "description": "Local chatbot for regression, binary classification, anomaly ranking and clustering. On 24 synthetic held-out datasets, generic tool calling passed 33/48 conversations and structured planning passed 31/48; extra planning showed no observed completion benefit.",
+    "description": "An experimental local chatbot exploring how an LLM can use specialized ML models as tools. It answers questions about numerical data, compares methods and shows recorded results, with limits on model runs and tool calls.",
     "tags": [
       "Python",
       "scikit-learn",
@@ -158,7 +158,7 @@ export const projects: PortfolioProject[] = [
   },
   {
     "id": "bic",
-    "featured": true,
+    "featured": false,
     "category": "Neural Learning Research",
     "title": "Brain in Computer (BiC)",
     "status": "Research prototype",
@@ -213,14 +213,14 @@ export const projects: PortfolioProject[] = [
   },
   {
     "id": "nasa-cmr-agent",
-    "featured": false,
+    "featured": true,
     "category": "AI / Data Search",
-    "title": "NASA CMR AI Agent",
+    "title": "Earth Science Metadata Agent",
     "status": "Independent assessment prototype",
     "githubUrl": "https://github.com/lpaynedev/NASA_CMR_AGENT",
     "caseStudyUrl": "/projects/nasa-cmr-agent",
     "disclaimer": "Independent assessment prototype, not an official NASA product or an operational service. Searches metadata rather than analyzing Earth-observation data. Recommendations are heuristic, not scientifically validated rankings; live provider behavior and deployment readiness are not established by the test doubles.",
-    "description": "Natural-language search of public NASA CMR metadata through Python, FastAPI and a staged LangGraph workflow. Graph stages run in sequence; CMR requests can run concurrently. The HTTP streaming endpoint follows a separate lightweight search flow.",
+    "description": "An independent prototype for finding Earth science datasets from plain-language questions. It searches NASA’s public metadata API, retrieves related context with Chroma and summarizes returned records using FastAPI and LangGraph.",
     "tags": [
       "Python",
       "FastAPI",
@@ -320,7 +320,7 @@ export const projects: PortfolioProject[] = [
       "Separate frontend and model-serving API.",
       "Supporting CLIP embeddings and FAISS retrieval in the backend."
     ],
-    "disclaimer": "Source-backed inference prototype. Hosted availability and end-to-end live inference were not verified for this review. No accuracy benchmark or production reliability is established. CLIP/FAISS retrieval is supporting backend code, distinct from the upload interface.",
+    "disclaimer": "Source-backed inference prototype. Hosted availability and end-to-end live inference are unverified. No accuracy benchmark or production reliability is established. CLIP/FAISS retrieval is supporting backend code, distinct from the upload interface.",
     "caseStudy": {
       "source": "Public frontend and inference-service implementation",
       "problem": "Image-analysis tools need to connect image upload, model execution, and result presentation. Smart Image Insights explores that workflow with detection and captioning while keeping model-serving responsibilities separate from the web interface.",
@@ -395,7 +395,7 @@ export const projects: PortfolioProject[] = [
       "Matched snippets accompanied by source filenames.",
       "Upload limits, timeout handling, and visible error states."
     ],
-    "disclaimer": "The current query path returns keyword-matched snippets and filenames, without an LLM or embeddings. Source was inspected; hosted availability and deployed integration were not verified for this review.",
+    "disclaimer": "The current query path returns keyword-matched snippets and filenames, without an LLM or embeddings. Hosted availability and deployed integration are unverified.",
     "caseStudy": {
       "source": "PDF and chat API implementation",
       "problem": "A small document-search tool must make uploaded text usable without letting large files or slow parsing leave the interface stuck. This prototype focuses on bounded PDF processing and a transparent keyword-based retrieval path.",
@@ -481,149 +481,67 @@ export const capabilities = [
 ];
 
 export const resumeSummary =
-  "AI / Full-Stack Software Engineer with experience building production-oriented LLM applications, backend platforms, observability systems, automated test infrastructure, and applied AI tools. Recent work includes AI application engineering for a federal science program through ADNET Systems, contributing across Python/FastAPI services, TypeScript/Next.js interfaces, Dockerized development environments, Playwright E2E testing, and multi-service observability. Strong fit for AI software engineering, backend AI platforms, LLM application development, and applied AI product engineering roles.";
+  "Software engineer building Python APIs and TypeScript/Node.js applications, with C++ systems and ML data-pipeline experience. Applied AI work includes retrieval, structured LLM tool use and automated evaluation.";
 
 export const resumeSkillGroups = [
-  {
-    title: "AI / LLM Systems",
-    body: "LLM application development / prompt engineering / agent workflows / RAG / vector databases / OpenAI API / Claude / Ollama / LangChain / MCP / LiteLLM / Instructor / evaluation workflows",
-  },
-  {
-    title: "Backend",
-    body: "Python / FastAPI / REST APIs / Pydantic / Alembic / PostgreSQL / Redis / Docker",
-  },
-  {
-    title: "Frontend",
-    body: "TypeScript / JavaScript / React / Next.js / Node.js",
-  },
-  {
-    title: "Testing / Observability",
-    body: "Playwright / GitHub Actions / Logfire / Loguru / structured tracing / token usage tracking / CI workflows",
-  },
-  {
-    title: "Modeling / Data",
-    body: "TensorFlow / YOLOv5 / data pipelines / model training datasets / experimentation",
-  },
-  {
-    title: "Tools",
-    body: "Git / GitHub / Linux and Windows development environments / agile development / code review / technical documentation",
-  },
+  { title: "Languages and backend", body: "Python / TypeScript / C++ / SQL / Node.js / FastAPI / REST APIs" },
+  { title: "AI applications", body: "LangChain / LangGraph / Ollama / retrieval and RAG / Chroma / tool calling" },
+  { title: "Engineering", body: "Docker / Git / pytest / Playwright / CI/CD / data pipelines / authentication" },
 ];
 
 export const experience = [
   {
     dates: "Sep 2025 - Jun 2026",
-    title: "ADNET Systems Inc.",
-    detail: "Software Engineer, AI Applications / Federal Science Program, Remote",
-    bullets: [
-      "Supported backend services, developer tooling, and prototype AI application workflows for a federal science program.",
-      "Built observability and usage-reporting patterns for multi-service LLM applications using common Python and TypeScript tooling.",
-      "Developed CI-ready end-to-end testing workflows to improve authentication, API, database, and UI reliability.",
-      "Contributed backend API, persistence, migration, local development, and containerized workflow improvements.",
-      "Worked across Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, Docker, GitHub Actions, and Playwright.",
-      "Improved developer visibility, repeatability, and operational traceability without exposing project-specific implementation details.",
-    ],
+    title: "ADNET Systems",
+    detail: "Python Software Developer",
+    bullets: ["Contributed to software development, testing, and observability for scientific data applications."],
   },
   {
-    dates: "Sep 2023 - Present",
-    title: "Freelance AI Developer",
-    detail: "LLMs & Chatbot Systems, Remote",
-    bullets: [
-      "Delivered conversational AI tools using GPT-4, Claude, and Ollama to automate complex user interactions and prototype AI-first workflows.",
-      "Engineered multi-agent prompt chains and memory-aware workflows using LangChain, Chroma, FAISS, and embedding-based retrieval patterns.",
-      "Designed rubric-based LLM response assessment workflows with human-in-the-loop review, expert evaluation, and iterative tuning cycles.",
-      "Coordinated evaluation and feedback workflows through platforms including Amazon Mechanical Turk and Mercor.",
-      "Built full-stack AI prototypes using Python, Docker, vector databases, and OpenAI API integrations.",
-      "Used rapid prototyping and AI-assisted development workflows to reduce iteration time and improve system quality.",
-    ],
-  },
-  {
-    dates: "Dec 2023 - Nov 2024",
+    dates: "Nov 2023 - Nov 2024",
     title: "Verint",
-    detail: "Software Engineer, Remote",
+    detail: "Software Engineer",
     bullets: [
-      "Contributed to B2B SaaS feature development using TypeScript, Node.js, and modern web application patterns.",
-      "Participated in agile sprint planning, peer code review, debugging, and continuous delivery workflows.",
-      "Collaborated with product and engineering teams to ship stable, user-facing functionality.",
-      "Supported backend and frontend implementation work with an emphasis on reliability, maintainability, and delivery speed.",
+      "Developed customer-facing B2B SaaS features in TypeScript and Node.js; investigated defects and implemented product enhancements.",
+      "Worked with product and engineering teammates through code review, testing and continuous delivery.",
     ],
   },
   {
     dates: "Jun 2021 - May 2022",
-    title: "NSWC Dahlgren",
-    detail: "Computer Scientist, Dahlgren, VA",
-    bullets: [
-      "Built data pipelines for training TensorFlow and YOLOv5 models in Python.",
-      "Delivered AI-enabled software and computer-vision support for defense R&D teams.",
-      "Collaborated with cross-functional teams to support model experimentation, training workflows, and technical validation.",
-      "Worked in secure engineering environments with rigorous testing, documentation, and review expectations.",
-    ],
+    title: "Naval Surface Warfare Center Dahlgren",
+    detail: "Computer Scientist",
+    bullets: ["Built Python data-labeling and processing pipelines supporting TensorFlow and YOLOv5 model training with engineering and research teams."],
   },
   {
-    dates: "Jun 2020 - Jun 2021",
-    title: "Peraton",
+    dates: "May 2018 - Jun 2021",
+    title: "Northrop Grumman and Peraton",
     detail: "Software Engineer",
     bullets: [
-      "Maintained and extended defense simulation systems using C++.",
-      "Supported software integration testing, defect resolution, and user-facing technical support.",
-      "Helped deliver stable simulation software through debugging, documentation, and coordination with technical stakeholders.",
-    ],
-  },
-  {
-    dates: "May 2018 - Jun 2020",
-    title: "Northrop Grumman",
-    detail: "Software Engineer",
-    bullets: [
-      "Developed data-processing pipelines and Python tools for large-scale simulation environments.",
-      "Supported defect resolution, client-focused enhancements, and system optimization.",
-      "Collaborated with engineering teams to improve software reliability, maintainability, and test readiness.",
-    ],
-  },
-  {
-    dates: "May 2022 - Present",
-    title: "Academic CS Tutor",
-    detail: "Remote",
-    bullets: [
-      "Mentored students in AI concepts, algorithms, debugging, Python, and computer science fundamentals.",
-      "Simplified complex AI and software engineering topics into practical examples and step-by-step learning modules.",
-      "Used GitHub, Zoom, Python notebooks, and real-world debugging exercises to support student learning.",
+      "Developed Python ETL tools for a research project. On a separate project, maintained C++ simulation software, investigated defects and performed integration testing.",
+      "Continued employment through the transfer of the Northrop Grumman business to Peraton; supported builds, version control and user training.",
     ],
   },
 ];
 
 export const resumeProjects = [
   {
-    "title": "Fuguely - Private Music Teacher Scheduling Platform",
-    "href": "/projects/fuguely",
-    "bullets": [
-      "Built and iterated on a full-stack scheduling platform for private music instruction workflows.",
-      "Implemented teacher onboarding, student roster management, invite flows, scheduling logic and billing-adjacent workflows.",
-      "Worked on scheduling, cancellation and lesson-credit workflows; live provider acceptance and production readiness were not verified for this review."
-    ]
+    title: "LLM Tool Calling Lab",
+    href: "/projects/llm-tool-calling-lab/",
+    bullets: ["Built an experimental local chatbot to explore how an LLM can use specialized ML models as tools. It answers questions about numerical data, compares methods and shows recorded results, with limits on model runs and tool calls."],
   },
   {
-    "title": "AI / LLM Application Prototypes",
-    "href": "/projects",
-    "bullets": [
-      "Built prototypes involving RAG, vector search, chatbot memory, agent workflows, prompt evaluation, and local LLM experimentation.",
-      "Used Python, Docker, OpenAI API, Claude, Ollama, LangChain, Chroma, FAISS, and web application frameworks to validate AI product concepts."
-    ]
-  }
+    title: "Earth Science Metadata Agent",
+    href: "/projects/nasa-cmr-agent/",
+    bullets: ["Built an independent prototype for finding Earth science datasets from plain-language questions. It searches NASA’s public metadata API, retrieves related context with Chroma and summarizes returned records using FastAPI and LangGraph."],
+  },
+];
+
+export const additionalExperience = [
+  "Freelance AI Software Development",
+  "Computer science tutoring in Python, algorithms, object-oriented programming and debugging.",
 ];
 
 export const education = [
-  {
-    degree: "B.S. Computer Science",
-    school: "University of Mary Washington",
-    location: "Fredericksburg, VA",
-    dates: "2014-2018",
-  },
-  {
-    degree: "B.A. Music",
-    school: "University of Mary Washington",
-    location: "Fredericksburg, VA",
-    dates: "2014-2018",
-  },
+  { degree: "B.S. Computer Science; B.A. Music", school: "University of Mary Washington", location: "Fredericksburg, VA", dates: "2018" },
 ];
 
 export const ideas = [

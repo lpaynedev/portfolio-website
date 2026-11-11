@@ -2,46 +2,63 @@
 import Image from "next/image";
 import SiteLink from './SiteLink';
 import BiCDemo from './BiCDemo';
+import { projects } from '../data/portfolio';
 export function StudioIntro() {
     return <>
       <section className="hero" aria-labelledby="hero-title">
         <div>
-          <div className="eyebrow">AI, applied ML &amp; questions worth building</div>
-          <h1 id="hero-title">Big questions.<br />Small, <em>testable</em><br />worlds.</h1>
-          <p className="intro"><strong>I&apos;m Luke.</strong> My current work centers on a coding system that has to survive interruption, and a small neural learner that has to prove what it learned. I want to show the hard parts: what fails, what persists, and what counts as progress.</p>
-          <div className="actions"><SiteLink className="button" href="#work">Step inside the projects <span aria-hidden="true">↘</span></SiteLink><SiteLink className="text-link" href="/about/">How I work</SiteLink></div>
-          <div className="portrait-row"><Image src="/images/headshot2026.webp" alt="Luke Payne" width={43} height={43}/><div><span>Software, experiments, unfinished questions.</span><span>Virginia, United States</span></div></div>
+          <div className="eyebrow">Software Engineer / Python, TypeScript &amp; Applied AI</div>
+          <h1 id="hero-title">Useful software.<br /><em>Practical</em> AI.</h1>
+          <p className="intro"><strong>I&apos;m Luke Payne.</strong> I build Python APIs and TypeScript applications. My applied AI projects explore retrieval, natural-language interfaces and LLM use of specialized machine-learning tools. My professional background includes SaaS features, scientific software, data pipelines and C++ simulation.</p>
+          <div className="actions"><SiteLink className="button" href="#work">Explore selected projects <span aria-hidden="true">↘</span></SiteLink><SiteLink className="text-link" href="/resume/">Read my résumé</SiteLink></div>
+          <div className="portrait-row"><Image src="/images/headshot2026.webp" alt="Luke Payne" width={43} height={43}/><div><span>Python APIs · TypeScript applications · Applied AI</span><span>Remote, Virginia</span></div></div>
         </div>
         <div className="studio">
           <div className="studio-art">
-            <span className="studio-label">THREE THREADS / ONE CURIOSITY</span>
+            <span className="studio-label">SOFTWARE / MODELS / EVIDENCE</span>
             <svg viewBox="0 0 500 465" role="img" aria-labelledby="map-title map-desc">
-              <title id="map-title">A map of three project questions</title><desc id="map-desc">Build, learn, and compare connect OpenClaw Evolutionary Coding Lab, Brain in Computer, and LLM Tool Calling Lab. This is an editorial illustration, not measured project output.</desc>
+              <title id="map-title">Software, models and evidence</title><desc id="map-desc">An editorial illustration of software interfaces, machine-learning tools and inspectable results. It is not measured project output.</desc>
               <g fill="none" stroke="currentColor"><circle cx="250" cy="235" r="137" opacity=".25"/><circle className="orbit" cx="250" cy="235" r="173" strokeDasharray="2 19" opacity=".45"/><path d="M250 109 367 303 132 303Z" opacity=".55"/><path d="M250 109V235L367 303M250 235 132 303" strokeDasharray="4 5" opacity=".6"/><circle cx="250" cy="235" r="8" fill="#f8c27c" stroke="none"/></g>
               <g transform="translate(209 69)" fill="#f3f0e8"><rect width="26" height="26" rx="3"/><rect x="38" width="26" height="26" rx="3" opacity=".5"/><rect y="38" width="26" height="26" rx="3" opacity=".5"/><rect x="38" y="38" width="26" height="26" rx="3"/></g>
               <g transform="translate(328 260)" stroke="#f3f0e8" fill="none" strokeWidth="2"><ellipse cx="38" cy="40" rx="38" ry="14"/><ellipse cx="38" cy="40" rx="38" ry="14" transform="rotate(60 38 40)"/><ellipse cx="38" cy="40" rx="38" ry="14" transform="rotate(120 38 40)"/><circle cx="38" cy="40" r="4" fill="#f8c27c" stroke="none"/></g>
               <g transform="translate(99 274)" fill="none" stroke="#f3f0e8" strokeWidth="2"><rect width="63" height="52" rx="4"/><path d="m12 15 10 10-10 10m20 0h17"/></g>
-              <g fill="currentColor" fontFamily="Consolas,monospace" fontSize="12"><text x="241" y="160" textAnchor="middle">01 / BUILD</text><text x="121" y="352" textAnchor="middle">03 / COMPARE</text><text x="366" y="352" textAnchor="middle">02 / LEARN</text></g>
+              <g fill="currentColor" fontFamily="Consolas,monospace" fontSize="12"><text x="241" y="160" textAnchor="middle">01 / BUILD</text><text x="121" y="352" textAnchor="middle">03 / INSPECT</text><text x="366" y="352" textAnchor="middle">02 / MODELS</text></g>
             </svg>
             <div className="studio-foot"><span>TOOLS · LEARNING · EVIDENCE</span><span>↗</span></div>
           </div>
-          <div className="sticker">Curiosity first.<br />Evidence follows.</div>
-          <div className="art-caption"><span className="arrow" aria-hidden="true">↳</span><span>Different experiments. A shared habit:<br />make the interesting part inspectable.</span></div>
+          <div className="sticker">Build clearly.<br />Show the evidence.</div>
+          <div className="art-caption"><span className="arrow" aria-hidden="true">↳</span><span>Useful interfaces. Clear boundaries.<br />Results a person can inspect.</span></div>
         </div>
       </section>
 
       </>;
 }
 export function FlagshipWork() {
-    return <><section className="work" id="work" aria-labelledby="work-title">
-        <div className="section-top"><h2 id="work-title">The work I want to show.</h2><span className="eyebrow">Three deeper stories / architecture, experiments &amp; evidence</span></div>
+  const selected = ["llm-tool-calling-lab", "nasa-cmr-agent"].map(id => projects.find(project => project.id === id)!);
+  return <section className="work selected-work" id="work" aria-labelledby="work-title">
+    <div className="section-top"><h2 id="work-title">Applied AI, made concrete.</h2><span className="eyebrow">Two selected projects / public source</span></div>
+    <div className="selected-grid">{selected.map((project, index) => <article className="selected-card" key={project.id}>
+      <p className="eyebrow">0{index + 1} / {project.status}</p>
+      <h3>{project.title}</h3>
+      <p>{project.description}</p>
+      <div className="selected-tags">{project.tags.slice(0, 5).join(" / ")}</div>
+      <div className="project-actions"><SiteLink href={project.caseStudyUrl}>Read the case study ↗</SiteLink>{project.githubUrl && <SiteLink href={project.githubUrl}>Inspect the source ↗</SiteLink>}</div>
+      <p className="selected-boundary">{project.id === "llm-tool-calling-lab" ? "Experimental application. The published evaluation uses synthetic data; improved general reasoning and production reliability are not established." : "Independent prototype using public NASA APIs, not an official NASA product or an operational service."}</p>
+    </article>)}</div>
+    <div className="actions"><SiteLink className="text-link" href="/resume/">Professional experience and technical skills →</SiteLink></div>
+  </section>;
+}
+
+export function ExperimentalWork() {
+    return <><section className="work" id="experiments" aria-labelledby="experiments-title">
+        <div className="section-top"><h2 id="experiments-title">Further experiments.</h2><span className="eyebrow">Three deeper stories / architecture, experiments &amp; evidence</span></div>
         <nav className="work-index" aria-label="Featured projects"><SiteLink href="#openclaw"><span>01</span>OpenClaw Evolutionary Lab</SiteLink><SiteLink href="#bic"><span>02</span>Brain in Computer</SiteLink><SiteLink href="#llm-lab"><span>03</span>LLM Tool Calling Lab</SiteLink></nav>
 
         <article className="flagship" id="openclaw" aria-labelledby="openclaw-title">
           <div className="flagship-head"><span className="eyebrow">01 / OpenClaw Evolutionary Coding Lab</span><span className="status-label">Active engineering / historical offline candidate</span></div>
           <div className="flagship-grid">
             <div><h3 id="openclaw-title">What happens when<br />a coding agent<br />gets interrupted?</h3><p className="lead">The interesting part starts when a task fails, a caller disappears, or a process survives its deadline.</p><p className="story">OpenClaw is my experiment in bounded coding work: explicit permissions, changes in an isolated project copy, and a result a person can inspect. Planning, task scheduling, durable records and execution components exist. Connecting them into a complete coding workflow is still the hard part.</p><div className="focus-note"><strong>My focus</strong>I’m directing the system boundaries and acceptance criteria: which actions a task may perform, what survives a restart, and what evidence is needed before a run counts as complete. Development and implementation are AI-assisted.</div><div className="project-actions"><SiteLink href="/projects/openclaw-evolutionary-lab/">Read the project &amp; eight-part series ↗</SiteLink><SiteLink href="/lab/openclaw-cancellation-and-recovery/">Follow the interruption story ↗</SiteLink></div></div>
-            <figure className="artifact"><div className="artifact-top"><span>ACTUAL VALIDATION RECORD</span><span>HISTORICAL SOURCE-v10 / SEP 22</span></div><div className="receipt-number">1,612</div><div className="receipt-title">offline tests recorded for the extracted candidate</div><pre className="receipt-code">{"{\n  \"profile\": \"offline\",\n  \"testsRun\": 1612,\n  \"passed\": true,\n  \"failures\": [],\n  \"errors\": [],\n  \"nativeQualificationClaim\": \"NONE\"\n}"}</pre><div className="receipt-bound">1 expected historical failure · 17 host checks excluded</div><figcaption>Exact field excerpt from the source-v10 validation receipt. The offline wheel demo enrolled one synthetic registry candidate, with execution and other capabilities disabled. These saved results were not rerun for this preview.</figcaption></figure>
+            <figure className="artifact"><div className="artifact-top"><span>ACTUAL VALIDATION RECORD</span><span>HISTORICAL SOURCE-v10 / SEP 22</span></div><div className="receipt-number">1,612</div><div className="receipt-title">offline tests recorded for the extracted candidate</div><pre className="receipt-code">{"{\n  \"profile\": \"offline\",\n  \"testsRun\": 1612,\n  \"passed\": true,\n  \"failures\": [],\n  \"errors\": [],\n  \"nativeQualificationClaim\": \"NONE\"\n}"}</pre><div className="receipt-bound">1 expected historical failure · 17 host checks excluded</div><figcaption>Exact field excerpt from the source-v10 validation receipt. The offline wheel demo enrolled one synthetic registry candidate, with execution and other capabilities disabled. These are saved historical results, not a live rerun.</figcaption></figure>
           </div>
           <div className="feature-bottom"><div><h4>What the evidence establishes</h4><p>A reproducible historical source archive and installed offline package, plus focused evidence for deadlines, stopping work and preserving outcomes. The public series explains the findings; it does not independently reproduce the local engine results.</p><div className="loop" aria-label="Intended workflow"><span>Scope a task</span><i aria-hidden="true">→</i><span>Work in a copy</span><i aria-hidden="true">→</i><span>Review a patch</span></div></div><div className="boundary"><h4>Still unfinished</h4><p>Observer and service acceptance, native startup, durable request integration, and the complete success/failure/cancellation/restart demonstration. The current convergence policy has population one; multi-population evolutionary search is not established.</p></div></div>
         </article>
@@ -64,14 +81,22 @@ export function FlagshipWork() {
       </>;
 }
 export function SupportingWork() {
-    return <><section className="supporting" aria-labelledby="supporting-title"><div className="eyebrow">Supporting work / earlier projects</div><h2 id="supporting-title">Other useful evidence.</h2><p className="supporting-intro">A few earlier projects show the API, retrieval and product work behind the current experiments.</p><article className="support-row"><div><h3>NASA CMR AI Agent</h3><span className="small-status">Independent assessment / public source</span></div><p>Natural-language Earth-science search through a Python/FastAPI application and LangGraph workflow using public NASA CMR APIs. An independent project, not an official NASA product.</p><SiteLink href="/projects/nasa-cmr-agent/">Read case study ↗</SiteLink></article><article className="support-row"><div><h3>AutoAgent</h3><span className="small-status">Experimental local application</span></div><p>Local code critiques, structured findings, SQLite feedback and retrieval of earlier examples. Model and retrieval errors remain visible; feedback does not establish better review correctness.</p><SiteLink href="/projects/autoagent/">Read case study ↗</SiteLink></article><article className="support-row"><div><h3>Fuguely</h3><span className="small-status">Private-source prototype / public case study</span></div><p>Music-teacher scheduling, student rosters, invitations, communication and billing workflows. Product-oriented full-stack work with private source.</p><SiteLink href="/projects/fuguely/">Read case study ↗</SiteLink></article></section>
-      </>;
+  return <section className="supporting" aria-labelledby="supporting-title">
+    <div className="eyebrow">More software and experiments</div><h2 id="supporting-title">Other work to explore.</h2>
+    <p className="supporting-intro">Additional product prototypes and research experiments, with their current limits documented.</p>
+    {[
+      { title: "AutoAgent", status: "Experimental local application", description: "Local code critiques, structured findings, SQLite feedback and retrieval of earlier examples. Model and retrieval errors remain visible.", href: "/projects/autoagent/" },
+      { title: "Fuguely", status: "Private-source prototype / public case study", description: "Music-teacher scheduling, student rosters, invitations, communication and billing workflows.", href: "/projects/fuguely/" },
+      { title: "Brain in Computer (BiC)", status: "Research prototype", description: "Controlled experiments with a small neural learner, verified curricula and explicit learning and retention limits.", href: "/projects/bic/" },
+      { title: "OpenClaw Evolutionary Coding Lab", status: "Active engineering / incomplete integration", description: "Bounded coding work, interruption recovery and inspectable outcomes. A complete integrated coding workflow remains unfinished.", href: "/projects/openclaw-evolutionary-lab/" },
+    ].map(project => <article className="support-row" key={project.title}><div><h3>{project.title}</h3><span className="small-status">{project.status}</span></div><p>{project.description}</p><SiteLink href={project.href}>Read case study ↗</SiteLink></article>)}
+  </section>;
 }
 export function WorkingNotes() {
     return <><section className="next" id="next" aria-labelledby="next-title">
         <div><span className="plan-badge">On the drawing board · not built</span><h2 id="next-title">An alert is a starting point.<br />What comes next?</h2><p>The next Lab direction is automatic composition of different ML tools. The product hypothesis: a local telemetry workbench where metrics and an alert lead to evidence, uncertainty, and useful next checks.</p><p>Changing-condition anomaly detection comes first, with regime prediction as a transfer task. The planned 40–60-hour first milestone still needs an implementation and evaluation.</p><SiteLink className="text-link" href="/lab/llm-tool-calling-lab-first-release/">Start with what v0.1 actually tested ↗</SiteLink></div>
         <div className="flow"><div className="flow-head"><span>PROPOSED EXPERIENCE</span><span>NO LIVE RESULTS</span></div><div className="flow-box"><span>01</span>Bring metrics + an alert</div><div className="flow-arrow" aria-hidden="true">↓</div><div className="flow-box"><span>02</span>Investigate with bounded ML tools</div><div className="flow-arrow" aria-hidden="true">↓</div><div className="flow-box"><span>03</span>Inspect evidence, uncertainty &amp; next checks</div><small>v0.1 compared estimator selection.<br />Automatic model composition is future work.</small></div>
       </section>
-      <section className="about" id="about" aria-labelledby="about-title"><div><div className="eyebrow">A note on how I work</div><h2 id="about-title">Curiosity needs<br />something to push against.</h2></div><div><p>I want to know what happens after the impressive first demo: when an agent is interrupted, when a learner sees a new procedure, or when a chatbot has to explain a second result.</p><p><strong>My focus is making those questions concrete.</strong> What crosses each system boundary? What evidence should a model return? What would count as success, and what would change my mind?</p><p>I use AI-assisted development to explore implementations. I want the decisions, trade-offs, and limits to be as inspectable as the code.</p></div></section>
+      <section className="about" id="about" aria-labelledby="about-title"><div><div className="eyebrow">A note on how I work</div><h2 id="about-title">Curiosity needs<br />something to push against.</h2></div><div><p>I build software around models: APIs, retrieval workflows, useful interfaces and results that can be inspected.</p><p><strong>My focus is practical AI application engineering.</strong> Clear interfaces, testing and honest limits help turn an interesting prototype into something that can be evaluated and improved.</p><p>I use AI-assisted development to explore implementations. I want the decisions, trade-offs, and limits to be as inspectable as the code.</p></div></section>
     </>;
 }
